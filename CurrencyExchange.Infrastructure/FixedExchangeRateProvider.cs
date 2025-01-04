@@ -12,8 +12,8 @@ public class FixedExchangeRateProvider : IExchangeRateProvider
         // مقداردهی اولیه نرخ تبدیل‌ها (برای مثال)
         _exchangeRates = new Dictionary<string, Dictionary<string, decimal>>()
         {
-            { "USD", new Dictionary<string, decimal> { { "IRR", 82000 }, { "EUR", 0.91m } } },
-            { "EUR", new Dictionary<string, decimal> { { "USD", 1.1m }, { "IRR", 90000 } } },
+            { "USD", new Dictionary<string, decimal> { { "IRR", 820000 }, { "EUR", 0.91m } } },
+            { "EUR", new Dictionary<string, decimal> { { "USD", 1.1m }, { "IRR", 900000 } } },
             // می‌تونید نرخ‌های دیگه رو هم اضافه کنید
         };
     }
