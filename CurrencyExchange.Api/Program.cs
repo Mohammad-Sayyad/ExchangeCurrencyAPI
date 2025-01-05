@@ -20,6 +20,9 @@ builder.Services.AddScoped<ICurrencyConverterService, CurrencyEuroConverterServi
 builder.Services.AddScoped<IExchangeRateProvider, FixedExchangeRateProvider>();
 builder.Services.AddScoped<CurrencyConverter>();
 
+builder.Services.AddScoped<CustomCurrencyService>();
+
+
 // Add services for controllers
 builder.Services.AddControllers();
 

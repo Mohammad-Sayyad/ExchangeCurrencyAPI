@@ -59,5 +59,21 @@ namespace CurrencyExchange.Api.Controller
                 return BadRequest(new { Error = ex.Message });
             }
         }
+
+        [HttpGet("convert/custom-to-irr")]
+        public async Task<IActionResult> ConvertCustomToIRR([FromQuery] string fromCurrency, [FromQuery] decimal amount)
+        {
+            try
+            {
+                var customConverter = new CustomCurrencyService(new HttpClient());
+                var result = await customConverter.ConvertCurrency(fromCurrency, "IRR", amount);
+                return Ok(new { AmountInIRR = result });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Error = ex.Message });
+            }
+        }
+
     }
 }
